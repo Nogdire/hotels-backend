@@ -5,7 +5,7 @@ import { checkAuth } from "../utils/checkAuth.js";
 const router = new Router();
 
 // Register
-// hhtp://localhost:3002/api/autj/register
+// hhtp://localhost:3002/api/auth/register
 router.post("/register", register);
 
 // Login
