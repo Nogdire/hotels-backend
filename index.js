@@ -19,7 +19,7 @@ app.use("/api/user", userRoute);
 
 async function start() {
   try {
-    await mongoose.connect(process.env.DATA_BASE);
+    await mongoose.connect(`${process.env.DATA_BASE}`);
 
     app.listen(process.env.PORT || 4444, () => console.log("Server started"));
   } catch (e) {
