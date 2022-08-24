@@ -19,9 +19,7 @@ app.use("/api/user", userRoute);
 
 async function start() {
   try {
-    await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ngm2rmg.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
-    );
+    await mongoose.connect(process.env.DATA_BASE);
 
     app.listen(process.env.PORT || 4444, () => console.log("Server started"));
   } catch (e) {
